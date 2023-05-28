@@ -7,7 +7,7 @@ var corsOptions = {
     origin: "http://localhost:8081"
 };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 // parse request of content-type - application/json
 app.use(express.json());
@@ -33,7 +33,7 @@ db.mongoose
 
 // simple route
 app.get("/", (req, res) => {
-    res.json({message: "Welcome to GameTime 2 REST API application"});
+    res.json({ message: "Welcome to GameTime 2 REST API application" });
 });
 
 require("./src/routes/playRecord.routes")(app);

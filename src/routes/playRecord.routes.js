@@ -27,5 +27,5 @@ module.exports = app => {
     // Delete all PlayRecord from the database
     router.delete("/", playRecord.deleteAll);
 
-    app.use('/api/playRecord', router);
+    app.use('/api/PlayRecord', router);
 }
